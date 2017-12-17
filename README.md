@@ -1,17 +1,11 @@
 ## Getting-and-Cleaning-Data
 # Course Project
-You should create one R script called run_analysis.R that does the following.
+The R script, run_analysis.R, does the following:
 
- 1. Merges the training and the test sets to create one data set.
- 2. Extracts only the measurements on the mean and standard deviation for each measurement.
- 3. Uses descriptive activity names to name the activities in the data set.
- 4. Appropriately labels the data set with descriptive activity names.
- 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
-# Steps to work on this course project
- 1. Download the data source and put into a folder on your local drive. You'll have a UCI HAR Dataset folder.
- 2. Put run_analysis.R in the parent folder of UCI HAR Dataset, then set it as your working directory using setwd() function in RStudio.
- 3. Run source("run_analysis.R"), then it will generate a new file secTidySet.txt in your working directory.
-
-# Dependencies
-run_analysis.R file will help you to install the dependencies automatically. It depends on reshape2 and data.table.
+1. Download the dataset if it does not already exist in the working directory
+2. Load the activity and feature info
+3. Loads both the training and test datasets, keeping only those columns which reflect a mean or standard deviation
+4. Loads the activity and subject data for each dataset, and merges those columns with the dataset
+5. Merges the two datasets
+6. Converts the activity and subject columns into factors
+7. Creates a tidy dataset that consists of the average value of each variable for each subject and activity pair.
